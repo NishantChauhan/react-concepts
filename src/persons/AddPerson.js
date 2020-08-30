@@ -1,11 +1,14 @@
 import React, {Component} from "react";
-
 class AddPerson extends Component {
     initialState = {firstname: "", lastname: ""};
-
     constructor(props) {
         super(props);
         this.state = {...this.initialState};
+
+        /**
+         * We have to bind class method to this so that when html elements are clicked
+         * They must refer to the correct this method.
+         * */
         this.onFirstNameChange = this.onFirstNameChange.bind(this);
         this.onLastNameChange = this.onLastNameChange.bind(this);
         this.onAddButtonClick = this.onAddButtonClick.bind(this);
@@ -29,6 +32,10 @@ class AddPerson extends Component {
     onLastNameChange(e) {
         this.setState({lastname: e.target.value});
     }
+    /**
+     * Here we are using controlled components to control the state of the AddPerson Component
+     * This means that the only one source of truth will be the Component State.
+     * */
     render() {
         return (
             <form>
@@ -45,5 +52,4 @@ class AddPerson extends Component {
         );
     }
 }
-
 export default AddPerson;
