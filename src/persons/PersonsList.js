@@ -3,6 +3,7 @@ import Person from "./Person";
 import AddPerson from "./AddPerson.js";
 import {UserContext} from "./UserContext.js";
 import UpdateLog from "./UpdateLog";
+import {Button, Container, Divider, Header, List} from "semantic-ui-react";
 
 class PersonsList extends Component {
     baseURL = 'http://localhost:6100/';
@@ -40,7 +41,7 @@ class PersonsList extends Component {
 
     componentDidMount() {
         this.fetchPersons()
-        setInterval(()=>this.fetchPersons(),1000);
+        /*setInterval(() => this.fetchPersons(), 1000);*/
     }
 
     fetchPersons() {
@@ -71,17 +72,19 @@ class PersonsList extends Component {
          * */
         return (
             <UserContext.Provider value={this.currentUser}>
-                <ol>
-                    {this.state.persons.map((person) => <Person key={person.id} person={person}/>)}
-                </ol>
-                <div>
-                    <button onClick={() => {
+                <Container>
+                    <Header>Persons List</Header>
+                    <List ordered>
+                        {this.state.persons.map((person) => <Person key={person.id} person={person}/>)}
+                    </List>
+                    <Button onClick={() => {
                         this.setState({addMorePersons: !this.state.addMorePersons})
                     }
-                    }>Add more persons?
-                    </button>
+                    } content='Add more persons?'>
+                    </Button>
                     {addPersonComponent}
-                </div>
+                </Container>
+
                 <UpdateLog updateLog={this.state.updateLogs}/>
             </UserContext.Provider>
         )

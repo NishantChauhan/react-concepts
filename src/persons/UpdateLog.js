@@ -1,23 +1,25 @@
 import React, {Component} from "react";
 import {UserContext} from "./UserContext";
+import {Container, Divider, Header, List} from "semantic-ui-react";
 
 class UpdateLog extends Component {
     static contextType = UserContext;
 
     render() {
         return (
-            <div>
-                <p>Update Log</p>
-                <ol>
+            <Container>
+                <Divider/>
+                <Header as='h3'>Update Log</Header>
+                <List ordered>
                 {
                     this.props.updateLog.map((log, index) => {
                             const userLog = 'Date: ' + log.date.toLocaleString() +' User: ' + this.context + '.' ;
-                            return (<li key={index}> {log.log}<br/><small>{userLog}</small>   </li>);
+                            return (<List.Item key={index}> {log.log}<br/><small>{userLog}</small>   </List.Item>);
                         }
                     )
                 }
-                </ol>
-            </div>
+                </List>
+            </Container>
 
         );
     }

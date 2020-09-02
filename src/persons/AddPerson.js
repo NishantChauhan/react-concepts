@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import {FormButton, Form, Divider} from "semantic-ui-react";
 class AddPerson extends Component {
     initialState = {firstname: "", lastname: ""};
     constructor(props) {
@@ -38,17 +39,16 @@ class AddPerson extends Component {
      * */
     render() {
         return (
-            <form>
-                <label> First Name
-                    <input type="text" value={this.state.firstname}
-                           onChange={this.onFirstNameChange}/>
-                </label>
-                <label> Last Name
-                    <input type="text" value={this.state.lastname}
-                           onChange={this.onLastNameChange}/>
-                </label>
-                <button onClick={this.onAddButtonClick}>Add</button>
-            </form>
+            <Form>
+                <Divider/>
+                <Form.Input fluid label='First Name' placeholder='First Name' value={this.state.firstname}
+                            onChange={this.onFirstNameChange}>
+                </Form.Input>
+                <Form.Input fluid label='First Name' placeholder='Last Name' value={this.state.lastname}
+                            onChange={this.onLastNameChange}>
+                </Form.Input>
+                <FormButton onClick={this.onAddButtonClick} content={'Add'}/>
+            </Form>
         );
     }
 }
