@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/react-concepts/static/css/main.76e27cc9.chunk.css",
+    "main.js": "/react-concepts/static/js/main.65a43692.chunk.js",
+    "main.js.map": "/react-concepts/static/js/main.65a43692.chunk.js.map",
+    "runtime-main.js": "/react-concepts/static/js/runtime-main.e267a2b9.js",
+    "runtime-main.js.map": "/react-concepts/static/js/runtime-main.e267a2b9.js.map",
+    "static/css/2.af4b2f4d.chunk.css": "/react-concepts/static/css/2.af4b2f4d.chunk.css",
+    "static/js/2.2bec4723.chunk.js": "/react-concepts/static/js/2.2bec4723.chunk.js",
+    "static/js/2.2bec4723.chunk.js.map": "/react-concepts/static/js/2.2bec4723.chunk.js.map",
+    "index.html": "/react-concepts/index.html",
+    "precache-manifest.93e66d8560a88b3b9e0f69f2dcb5e954.js": "/react-concepts/precache-manifest.93e66d8560a88b3b9e0f69f2dcb5e954.js",
+    "service-worker.js": "/react-concepts/service-worker.js",
+    "static/css/2.af4b2f4d.chunk.css.map": "/react-concepts/static/css/2.af4b2f4d.chunk.css.map",
+    "static/css/main.76e27cc9.chunk.css.map": "/react-concepts/static/css/main.76e27cc9.chunk.css.map",
+    "static/js/2.2bec4723.chunk.js.LICENSE.txt": "/react-concepts/static/js/2.2bec4723.chunk.js.LICENSE.txt",
+    "static/media/semantic.less": "/react-concepts/static/media/outline-icons.ef60a4f6.woff"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e267a2b9.js",
+    "static/css/2.af4b2f4d.chunk.css",
+    "static/js/2.2bec4723.chunk.js",
+    "static/css/main.76e27cc9.chunk.css",
+    "static/js/main.65a43692.chunk.js"
+  ]
+}
